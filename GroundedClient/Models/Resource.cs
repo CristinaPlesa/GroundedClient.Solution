@@ -8,6 +8,7 @@ namespace GroundedClient.Models
   public class Resource
   {
     public int ResourceId { get; set; }
+    public string ResourceName { get; set; }
     public string ResourceQuote { get; set; }
     public string ResourceMeditation { get; set; }
     public string ResourceAdvice { get; set; }
