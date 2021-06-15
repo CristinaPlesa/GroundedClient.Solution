@@ -9,19 +9,11 @@
         <li>Quote: @resource.ResourceQuote</li>
         <li>Exercise: @resource.ResourceExercise</li>
         <li>Color: @resource.ResourceColor</li>
-        <li>Quote: @resource.ResourceQuote</li>
-        <li>Exercise: @resource.ResourceExercise</li>
-        <li>Color: @resource.ResourceColor</li>
+        <li>Quote: @resource.ResourceMusic</li>
+        <li>Exercise: @resource.ResourceImage</li>
+        <li>Color: @resource.ResourceLink</li>
     </ul>
     <a href="/Resources/Details/@(resource.ResourceId)"><p>View Details</p></a>
     <br>
 }
 </ol>
-
-
-ResourceQuote { get; set; }
-    public string ResourceExercise { get; set; }
-    public string ResourceColor { get; set; }
-    public string ResourceMusic { get; set; }
-    public string ResourceImage { get; set; }
-    public string ResourceLink

@@ -1,16 +1,53 @@
-﻿@{
+﻿<div class="offset-md-3 col-md-6">
+
+@{
     ViewData["Title"] = "Grounded";
 }
 
 <div class="text-center">
     <h1 class="display-4">🌱 Grounded 🌿</h1>
+    <br>
+    <br>
     <h3>How are you feeling?</h3>
 
-    <select>
+@foreach(Resource resource in Model)
+{
+  <a href="/Resources/Details/@(resource.ResourceId)">@resource.ResourceName</a>
+  <br>
+}
+
+
+ @* @using (Html.BeginForm())
+ {
+    <select class="form-control">
       @foreach (Resource resource in Model)
       {
-        <option><a href="/Resources/Details/@(resource.ResourceId)">@resource.ResourceName</option>
+        <option value="/Resources/Details/@(resource.ResourceId)">@resource.ResourceName</option>
       }
     </select>
+    <button class="btn btn-success mt-3 btn-block" type="submit" >Enter</button>
+ }
+</div> *@
 
-</div>
+@* @using (Html.BeginForm())
+{
+  @Html.DropDownList("Category", new List<SelectListItem>
+  {
+  new SelectListItem { Text = @Html.DisplayNameFor(m=>m.Category), Selected=true, Disabled = true},
+  new SelectListItem { Text = "Fiction", Value = "@(resource.ResourceId)"},
+  new SelectListItem { Text = "Non-Fiction", Value = "Non-Fiction"},
+  }, new { @class="form-control"})
+
+  @Html.TextBoxFor(model => model.SubCategory, new { @class = "form-control", placeholder = @Html.DisplayNameFor(m=>m.SubCategory), required="required"})
+
+  @Html.TextBoxFor(model => model.BookStock, new { @class = "form-control", placeholder = @Html.DisplayNameFor(m=>m.BookStock), required="required"})
+  <input type="submit" value="Add new book" class="btn btn-default btn-block btn-primary"/>
+} *@
+
+
+
+
+
+
+
+
