@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Grounded";
 }
 
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">🌱 Grounded 🌿</h1>
+    <h3>How are you feeling?</h3>
 </div>
+
+
+@model GroundedClient.Models.Emotion
+@model Library.Models.Book
+@using (Html.BeginForm())
+{
+  @Html.DropDownList("Emotion", new List<SelectListItem>
+  {
+  new SelectListItem { Text = @Html.DisplayNameFor(m=>m.Emotion), Selected=true, Disabled = true},
+  new SelectListItem { Text = "Fiction", Value = "Fiction"},
+  new SelectListItem { Text = "Non-Fiction", Value = "Non-Fiction"},
+  }, new { @class="form-control"})
+
+  <input type="submit" value="Add new book" class="btn btn-default btn-block btn-primary"/>
+}
+<form action="/" method="post">
+<Label for="name"></label>
+
+// things to consider. 
+// - We have no internal database to pull from. How do we link API to make actionlinks/dropdown menus.
+// Maybe we dont need emotionsController or Model. 
+// Use html helpers or make a regular dropdown.
+// We make a details page
+
+@* @foreach (Item item in Model)
+{
+<li>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId })</li>
+} *@

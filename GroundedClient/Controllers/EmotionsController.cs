@@ -12,15 +12,15 @@ namespace GroundedClient.Controllers
   {
     public IActionResult Index()
     {
-      var allEmotions = Emotion.GetEmotions();
-      return View(allEmotions);
+      // var allEmotions = Emotion.GetEmotions();
+      return View();
     }
 
-    public IActionResult Details(int id)
-    {
-      var emotion = emotion.GetDetails(id);
-      return View(emotion);
-    }
+    // public IActionResult Details(int id)
+    // {
+    //   var emotion = emotion.GetDetails(id);
+    //   return View(emotion);
+    // }
 
   }
 }

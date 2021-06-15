@@ -1,3 +1,4 @@
+
 using System.Collections.Generic;
 using System;
 using Newtonsoft.Json;
@@ -9,9 +10,9 @@ namespace GroundedClient
   {
     public Emotion()
     {
-      this.Resources = new HashSet<Resource>();
+      this.Emotions = new HashSet<Emotion>();
     }
-    
+
     public int EmotionId { get; set; }
     public string EmotionName { get; set; }
     public virtual ICollection<Emotion> Emotions { get; set; }
