@@ -9,18 +9,8 @@
     <select>
       @foreach (Resource resource in Model)
       {
-        <option><a href="/Resources/Details/@(resource.ResourceId)">$"{resource.ResourceName}"</option>
+        <option><a href="/Resources/Details/@(resource.ResourceId)">@resource.ResourceName</option>
       }
     </select>
 
-
-    
-    <!-- <form action="/" method="post">
-    <Label for="name"></label>
-    </form> -->
-      
 </div>
-// things to consider. 
-// - We have no internal database to pull from. How do we link API to make actionlinks/dropdown menus.
-// Use html helpers or make a regular dropdown.
-// We make a details page
