@@ -18,8 +18,8 @@ namespace GroundedClient.Controllers
 
     public IActionResult Details(int id)
     {
-      var resource = Resource.GetDetails(id);
-      return View(resource);
+      var thisResource = Resource.GetDetails(id);
+      return View(thisResource);
     }
 
   }

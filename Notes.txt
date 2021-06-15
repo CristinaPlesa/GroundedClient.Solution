@@ -1,0 +1,49 @@
+@* @model GroundedClient.Models.Emotion
+@model Library.Models.Book
+@using (Html.BeginForm()) 
+{
+  @Html.DropDownList("Emotion", new List<SelectListItem>
+  {
+  new SelectListItem { Text = @Html.DisplayNameFor(m=>m.Emotion), Selected=true, Disabled = true},
+  new SelectListItem { Text = "Fiction", Value = "Fiction"},
+  new SelectListItem { Text = "Non-Fiction", Value = "Non-Fiction"},
+  }, new { @class="form-control"})
+
+  <input type="submit" value="Add new book" class="btn btn-default btn-block btn-primary"/>
+} *@
+
+
+@* @foreach (Item item in Model)
+{
+<li>@Html.ActionLink($"{item.Description}", "Details", new { id = item.ItemId })</li>
+} *@
+
+THIS WILL BE THE MAIN PAGE WHERE WE WILL BE SELECTING WHICH EMOTION WE WOULD LIKE TO SEE
+<ul>
+      <li>Id: @destination.DestinationId</li>
+      <li>Name: @destination.DestinationName</li>
+      <li>Country: @destination.Country</li>
+      <li>State or Province: @destination.StateProvince</li>
+      <li>City: @destination.Category</li>
+      <li>Rating: @destination.Rating</li>
+      <li>Description: @destination.DestinationDescription</li>
+    </ul>
+    <a href="/Destinations/Details/@(destination.DestinationId)">
+      <p>View Details</p>
+    </a>
+    <hr />
+
+THIS WILL BE THE DETAILS PAGE FOR ALL EMOTIONS
+    <ol>
+  <ul>
+    <li>Id: @Model.DestinationId</li>
+    <li>Name: @Model.DestinationName</li>
+    <li>Country: @Model.Country</li>
+    <li>State or Province: @Model.StateProvince</li>
+    <li>City: @Model.City</li>
+    <li>Category: @Model.Category</li>
+    <li>Rating: @Model.Rating</li>
+    <li>Description: @Model.DestinationDescription</li>
+  </ul>
+  <hr />
+</ol>

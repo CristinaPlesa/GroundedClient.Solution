@@ -20,8 +20,22 @@ namespace GroundedClient.Controllers
 
         public IActionResult Index()
         {
-            return View();
+        var allResources = Resource.GetResources();
+        return View(allResources);
         }
+
+        // public IActionResult Index()
+        // {
+        //     return View();//we will need to reference the resources here to get access to the names.
+        // }
+
+        // public IActionResult Index()
+        // {
+        //     Dictionary<string, object> model = new Dictionary<string, object>();
+        //     List<Resource> resourceList = _logger.Resources.ToList();
+        //     model.Add("Resources", resourceList);
+        //     return View(model);
+        // }
 
         public IActionResult Privacy()
         {
