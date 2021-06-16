@@ -1,19 +1,13 @@
 @model GroundedClient.Models.Resource
-@*@using GroundedClient.Models*@
-@*@using MvcApplication8.Models;*@
-@*@model MvcApplication8.Models*@
 
-@*<div class="display-field">*@
-  @*@Html.DisplayFor(model => model.ImageURL)*@
-  @*<img src="Model.ImageUrl" alt="@Model.ResourceName" height="100"/>*@
-  @*@Html.Image("~/img/Anger.jpg", "alt", "100")*@
-
-
-  @*
-<img src="@Model" alt="Nature picture">
-<img src="~/Content/images/myimage.png" />*@
 <h1>@Model.ResourceName</h1>
 
-@Url.Content("~/img/Home.jpg")
+        <li>Quote: @Model.ResourceQuote</li>
+        <li>Exercise: @Model.ResourceExercise</li>
+        <li><a href=@Model.ResourceMusic>Song Suggestion</a></li>
+        <li><a href=@Model.ResourceLink>Resource for more info, tricks and tips</a></li>
+
+<!-- <img src="@Model.ResourceImage" alt="@Model.AltDescription"> -->
+
 
 
