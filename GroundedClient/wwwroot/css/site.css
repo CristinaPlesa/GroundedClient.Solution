@@ -87,3 +87,8 @@ h1,
 h2 {
   text-align: center;
 }
+
+.homepage {
+  background-image: url(https://wallpapercave.com/wp/wp7762149.jpg);
+  background-size: cover;
+}
