@@ -1,11 +1,22 @@
-@model GroundedClient.Models.Resource
+<div class="offset-md-3 col-md-6">
 
+@model GroundedClient.Models.Resource
 <h1>@Model.ResourceName</h1>
 
-        <li>Quote: @Model.ResourceQuote</li>
-        <li>Exercise: @Model.ResourceExercise</li>
-        <li><a href=@Model.ResourceMusic>Song Suggestion</a></li>
-        <li><a href=@Model.ResourceLink>Resource for more info, tricks and tips</a></li>
-
-<img src="@Model.ResourceImage" alt="@Model.AltDescription"> // This returns alt test but no image
+        <h2>Quote: <em>@Model.ResourceQuote</em></h2>
+        <br>
+        <ul>
+          <li>Exercise: @Model.ResourceExercise</li>
+          @if (Model.ResourceName == "Angry")
+          {
+            <textarea rows="4" cols="50" name="comment" form="usrform">Vent here...</textarea>
+          }
+          <br>
+          <li><a href=@Model.ResourceLink target="_blank">Resource for more info, tricks and tips</a></li>
+          <br>
+        </ul>
+<iframe src="@Model.ResourceMusic" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<br>
+<br>
+<img src="@Model.ResourceImage" alt="@Model.AltDescription" class="center"> @*Dummy data if img styling already made*@
 
