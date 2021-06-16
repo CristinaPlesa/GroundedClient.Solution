@@ -9,7 +9,7 @@
           <li>Exercise: @Model.ResourceExercise</li>
           @if (Model.ResourceName == "Angry")
           {
-            <textarea rows="4" cols="50" name="comment" form="usrform">Vent here...</textarea>
+            <textarea rows="4" cols="50" name="comment" form="usrform" Placeholder="Vent here..."></textarea>
           }
           <br>
           <li><a href=@Model.ResourceLink target="_blank">Resource for more info, tricks and tips</a></li>
@@ -18,5 +18,5 @@
 <iframe src="@Model.ResourceMusic" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 <br>
 <br>
-<img src="@Model.ResourceImage" alt="@Model.AltDescription" class="center"> @*Dummy data if img styling already made*@
+<img src="@Model.ResourceImage" alt="@Model.AltDescription" class="center"> @* class="center" is Dummy data if img styling already made*@
 
