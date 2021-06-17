@@ -12,6 +12,11 @@ a {
   color: #0366d6;
 }
 
+#navbar {
+  background-color: rgba(0, 0, 0, 0.65);
+  color: white;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -21,7 +26,7 @@ a {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #1b6ec2;
+  background-color: #ffffff;
   border-color: #1861ac;
 }
 
@@ -62,6 +67,8 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  color: white;
+  font-family: "Nanum Gothic", sans-serif;
 }
 .footer {
   position: absolute;
@@ -84,11 +91,45 @@ li {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
+  font-family: "Viaoda Libre", cursive;
 }
 
-.homepage {
-  background-image: url(https://wallpapercave.com/wp/wp7762149.jpg);
-  background-size: cover;
+.quote {
+  font-family: "Caveat", cursive;
+}
+
+img {
+  border-radius: 25px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 25px;
+  border-radius: 25px;
+}
+
+div.background {
+  background-color: rgba(7, 7, 7, 0.534);
+}
+
+a:link.emotion,
+a:visited.emotion {
+  background-color: rgba(7, 7, 7, 0.534);
+  color: white;
+  font-size: medium;
+  padding: 9px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid #1de2e9b9;
+  border-radius: 50px;
+  margin: 3px;
+  width: 14em;
+}
+
+a:hover.emotion {
+  background-color: #1de2e9b9;
 }

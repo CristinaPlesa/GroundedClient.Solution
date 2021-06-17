@@ -1,17 +1,28 @@
-﻿@*<div class="offset-md-3 col-md-6">*@
+﻿<style>
+  body {
+    background-image: url(https://wallpapercave.com/wp/wp7762149.jpg);
+    background-size: cover;
+}
+</style>
 @{
     ViewData["Title"] = "Grounded";
 }
 
 <div class="text-center">
-    <h1 class="display-4">🌱 Grounded 🌿</h1>
+  <div class="background">
+    <h2 class="display-4">A Space to Ground Yourself</h2>
     <br>
     <br>
-    <h3>How are you feeling?</h3>
+    <br>
+    <h3>Our goal is to help you improve your health and happiness.</h3>
+    <br>
+    <br>
+    <h3><b>How are you feeling?</b></h3>
+  </div>
 
 @foreach(Resource resource in Model)
 {
   <div id="@(resource.ResourceName)">
-  <a href="/Resources/Details/@(resource.ResourceId)">@resource.ResourceName</a>
+  <a href="/Resources/Details/@(resource.ResourceId)" class="emotion">@resource.ResourceName</a>
   </div>
 }
